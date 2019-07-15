@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <link rel="stylesheet" href="/static/admin/css/amazeui.min.css" />
+		  <link rel="stylesheet" href="/static/admin/css/admin.css" />
+	</head>
+	<body>
+		
+		<div class="admin-content-body">
+      <div class="am-cf am-padding am-padding-bottom-0">
+        <div class="am-fl am-cf">
+          <strong class="am-text-primary am-text-lg">图文预览</strong>
+        </div>
+      </div>
+      <hr  >
+      <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-6 am-margin gallery-list" >
+        <li th:each="i:${travel} ">
+          <a href="#">
+            <img class="am-img-thumbnail am-img-bdrs" th:src="${i.img}" alt="">
+            <div class="gallery-title" th:text="${i.addressname}"></div>
+          </a>
+        </li>
+      </ul>
+
+    
+    </div>
+	</body>
+</html>

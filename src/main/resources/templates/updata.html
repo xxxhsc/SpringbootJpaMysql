@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/amazeui.min.css" />
+    <link rel="stylesheet" href="/static/css/admin.css" />
+</head>
+<body>
+
+<div class="admin-content-body">
+    <div class="am-cf am-padding am-padding-bottom-0">
+        <div class="am-fl am-cf">
+            <strong class="am-text-primary am-text-lg">用户增加</strong>
+        </div>
+    </div>
+
+    <hr>
+
+    <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-6 am-margin gallery-list">
+        <form name="form" action="/addUser" method="post">
+            <li>
+                新的用户名：
+                <div class="am-input-group am-input-group-sm">
+                    <input type="text" name="username" id="username" class="am-form-field"/>
+                    <span class="am-input-group-btn">
+
+          </span>
+                </div>
+            </li>
+            <li>
+                新的密码：
+                <div class="am-input-group am-input-group-sm">
+                    <input type="text" name="password" id="password" class="am-form-field"/>
+                    <span class="am-input-group-btn">
+
+          </span>
+                </div>
+            </li>
+
+            <button class="am-btn am-btn-default" type="submit" id="submit" name="submit">提交</button>
+        </form>
+    </ul>
+
+
+</div>
+</body>
+</html>

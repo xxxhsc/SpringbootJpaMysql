@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"><head>
+    
+    <title>图文数据库系统</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Free HTML5 Website Template by ProBootstrap.com" />
+    <meta name="keywords" content="free bootstrap 4, free bootstrap 4 template, free website templates, free html5, free template, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="ProBootstrap.com" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/open-iconic-bootstrap.min.css">
+    
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="/static/css/icomoon.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+  </head>
+  <body>
+    
+    <aside class="probootstrap-aside js-probootstrap-aside">
+      <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none"><span class="oi oi-arrow-left"></span> Close</a>
+      <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">
+
+        <a th:href="@{~/findUsertravel}" class="mb-2 d-block probootstrap-logo">用户：<span th:text="${key}"></span></a>
+        <a th:href="@{~/logout}" target="_blank" title="点击退出登录">退出登录</a>
+      </div>
+      <div class="probootstrap-overflow">
+        <nav class="probootstrap-nav">
+          <ul>
+            <li class="probootstrap-animate active" data-animate-effect="fadeInLeft"><a th:href="@{~/listTravel}">首页</a></li>
+            <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a th:href="@{~/about202}">详情</a></li>
+            <li class="probootstrap-animate " data-animate-effect="fadeInLeft"><a th:href="@{~/findUsertravel}">我的</a></li>
+            <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a th:href="@{~/uploadTravel}">上传</a></li>
+          </ul>
+        </nav>
+        <footer class="probootstrap-aside-footer probootstrap-animate" data-animate-effect="fadeInLeft">
+          <ul class="list-unstyled d-flex probootstrap-aside-social">
+            <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+            <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+            <li><a href="#" class="p-2"><span class="icon-dribbble"></span></a></li>
+          </ul>
+          <p>&copy; 东升阳西升月 <br> All Rights . Designed by 1600300414Hsc <a href="http://www.cssmoban.com/" title="图文数据库系统" target="_blank">图文数据库系统</a></p>
+        </footer>
+      </div>
+    </aside>
+
+
+    <main role="main" class="probootstrap-main js-probootstrap-main">
+      <div > <form name="form" action="/findByInputLike" method="post"><input type="text" name="input" id="input"/> <input  id="submit" class="btn btn-primary" name="submit" type="submit" value="搜索" /></form></div>
+      <div class="probootstrap-bar">
+        <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
+        <div class="probootstrap-main-site-logo"><a href="index.html">Aside</a></a></div>
+      </div>
+      <div class="card-columns">
+        <div class="card" th:each="i:${travel} ">
+          <a th:href="@{about+${i.id}}">
+            <img class="card-img-top probootstrap-animate" th:src="${i.img}" alt="Card image cap" data-animate-effect="fadeIn">
+          </a>
+        </div>
+
+      </div>  
+	<div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >图文数据库系统</a></div>
+
+      <div class="container-fluid d-md-none">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="list-unstyled d-flex probootstrap-aside-social">
+              <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-dribbble"></span></a></li>
+            </ul>
+            <p>&copy; 东升阳西升月 <br> All Rights . Designed by 1600300414Hsc
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    
+
+    <script src="/static/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/jquery.waypoints.min.js"></script>
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+
+    <script src="/static/js/main.js"></script>
+
+    
+  </body>
+</html>
